@@ -14,6 +14,8 @@ Play with VGA and Arduino:
 - Download Arduino (arduino.cc) I like 1.8.16, but any are good!  
 - Install the VGAX Library. Sketch > Include Library > Manage Libraries > Search for VGAX   
 - ou can view the code here: https://github.com/smaffer/vgax?tab=readme-ov-file     
-- Wire up your a VGA breakout cable according to the wiring diagram. Use a flat head screwdriver to secure the wires. Don’t worry about the resistors! The first 3 pins control the color of your screen. Your arduino can only handle 2/3 colours! Keep track of the pin numbers on your board and on the breakout.    
+- Wire up your a VGA breakout cable according to the wiring diagram. Use a flat head screwdriver to secure the wires. Don’t worry about the resistors! The first 3 pins control the color of your screen. Your arduino can only handle 2/3 colours! Keep track of the pin numbers on your board and on the breakout.
+  ![image](https://github.com/LeeCyborg/VGA-Examples/assets/7967032/62627cfb-114a-4b19-a25c-4e9fb67d4277)
+
 - Plug in your VGA cable to the breakout, and plug your Arduino in. Upload an example code. File > Examples > VGAX > Random 
 - Play with the code! See my examples here: https://github.com/LeeCyborg/VGA-Examples/blob/main/VGA_Examples/VGA_Examples.ino   

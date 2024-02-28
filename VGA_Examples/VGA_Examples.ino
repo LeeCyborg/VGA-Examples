@@ -176,9 +176,10 @@ void setup() {
 }
 void loop() {
   //drawRandomSprite();
-  //drawSprite(0, VGAX_WIDTH/2, VGAX_HEIGHT/2, true);
+  //drawSprite(2, VGAX_WIDTH/2, VGAX_HEIGHT/2, true);
+  spriteFlip(2, 3, VGAX_WIDTH/2, VGAX_HEIGHT/2);
   //digitalTest();
-  randomNumbers();
+  //randomNumbers();
 }
 
 void digitalTest(){  // With a button wired to Digital 4, press it to change
@@ -204,6 +205,16 @@ void drawSprite(int whichSprite,int x, int y, bool mask){
     vga.blitwmask((byte*)(img_data[whichSprite]),(byte*)(img_mask_data[whichSprite]), IMG_WIDTH, IMG_HEIGHT, x, y);
   } else { 
     vga.blit((byte*)(img_data[whichSprite]), IMG_WIDTH, IMG_HEIGHT, x, y);
+  }
+}
+
+void spriteFlip(int whichSprite, int flipSprite, int x, int y){  
+  // Which sprite in the array, x and y location, 
+  // flip it with flipSprite
+  if(digitalRead(4)){ 
+    vga.blitwmask((byte*)(img_data[whichSprite]),(byte*)(img_mask_data[whichSprite]), IMG_WIDTH, IMG_HEIGHT, x, y);
+  } else { 
+    vga.blitwmask((byte*)(img_data[flipSprite]),(byte*)(img_mask_data[whichSprite]), IMG_WIDTH, IMG_HEIGHT, x, y);
   }
 }
 
